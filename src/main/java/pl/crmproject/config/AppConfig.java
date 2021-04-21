@@ -3,6 +3,7 @@ package pl.crmproject.config;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.LocalEntityManagerFactoryBean;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
@@ -18,6 +19,7 @@ import javax.persistence.EntityManagerFactory;
 @EnableWebMvc
 @ComponentScan(basePackages = "pl.crmproject")
 @EnableTransactionManagement
+@EnableJpaRepositories(basePackages = "pl.crmproject")
 public class AppConfig implements WebMvcConfigurer {
 
 
@@ -25,7 +27,7 @@ public class AppConfig implements WebMvcConfigurer {
     public LocalEntityManagerFactoryBean entityManagerFactory() {
         LocalEntityManagerFactoryBean entityManagerFactoryBean
                 = new LocalEntityManagerFactoryBean();
-        entityManagerFactoryBean.setPersistenceUnitName("bookstorePersistenceUnit");
+        entityManagerFactoryBean.setPersistenceUnitName("systemstorePersistenceUnit");
         return entityManagerFactoryBean;
     }
 
