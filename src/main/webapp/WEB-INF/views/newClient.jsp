@@ -22,7 +22,7 @@
     </p>
 
     <p>
-        Email: <form:input path="email" />
+        Email: <form:input path="emailAdress" />
     </p>
     <p>
         Phone number: <form:input path="telephonNumber" />

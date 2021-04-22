@@ -28,6 +28,7 @@ public class ClientController {
     @PostMapping
     @ResponseBody
     public String postNewClient(ClientDto client){
+        clientService.add(client);
         return client.toString();
     }
 }

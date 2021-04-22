@@ -1,18 +1,13 @@
 package pl.crmproject.Client;
 
-
-
 public class ClientDto {
 
 
     private String firstName;
     private String lastName;
-    private String email;
+    private String emailAdress;
     private String telephonNumber;
     private String address;
-
-    public ClientDto() {
-    }
 
 
     public String getFirstName() {
@@ -31,12 +26,12 @@ public class ClientDto {
         this.lastName = lastName;
     }
 
-    public String getEmail() {
-        return email;
+    public String getEmailAdress() {
+        return emailAdress;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setEmailAdress(String emailAdress) {
+        this.emailAdress = emailAdress;
     }
 
     public String getTelephonNumber() {
@@ -60,9 +55,10 @@ public class ClientDto {
         return "ClientDto{" +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
-                ", email='" + email + '\'' +
+                ", email='" + emailAdress + '\'' +
                 ", telephonNumber='" + telephonNumber + '\'' +
                 ", address='" + address + '\'' +
                 '}';
     }
+
 }

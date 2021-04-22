@@ -14,5 +14,13 @@ public class ClientService {
     public void add(ClientDto clientDto){
         Client newClient = new Client();
 
+        newClient.setName(clientDto.getFirstName());
+        newClient.setSurname(clientDto.getLastName());
+        newClient.setEmail(clientDto.getEmailAdress());
+        newClient.setAddress(clientDto.getAddress());
+        newClient.setTelephoneNumber(clientDto.getTelephonNumber());
+
+        clientRepository.save(newClient);
+
     }
 }
