@@ -1,9 +1,13 @@
 package pl.crmproject.Client;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import pl.crmproject.Contract.Contract;
+
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+import javax.validation.constraints.Email;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "clients")
@@ -13,15 +17,31 @@ public class Client {
     @GeneratedValue
     private Long id;
 
+
     private String name;
+
 
     private String surname;
 
+
     private String email;
+
 
     private String telephoneNumber;
 
+
     private String address;
+
+    @OneToMany(mappedBy = "client")
+    private List<Contract> contracts = new ArrayList<>();
+
+    public List<Contract> getContracts() {
+        return contracts;
+    }
+
+    public void setContracts(List<Contract> contracts) {
+        this.contracts = contracts;
+    }
 
     public Long getId() {
         return id;

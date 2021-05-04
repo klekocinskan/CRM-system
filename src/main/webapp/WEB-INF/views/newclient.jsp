@@ -15,20 +15,25 @@
 <form:form method="post" modelAttribute="client">
     <p>
         Name: <form:input path="firstName" />
+        <form:errors path="firstName" cssClass="error" />
     </p>
 
     <p>
         Surname: <form:input path="lastName" />
+        <form:errors path="lastName" cssClass="error" />
     </p>
 
     <p>
         Email: <form:input path="emailAdress" />
+        <form:errors path="emailAdress" cssClass="error" />
     </p>
     <p>
         Phone number: <form:input path="telephonNumber" />
+        <form:errors path="telephonNumber" cssClass="error" />
     </p>
     <p>
         Address: <form:input path="address" />
+        <form:errors path="address" cssClass="error" />
     </p>
 
     <input type="submit" value="dodaj">

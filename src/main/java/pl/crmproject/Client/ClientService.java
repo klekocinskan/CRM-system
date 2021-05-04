@@ -2,6 +2,8 @@ package pl.crmproject.Client;
 
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class ClientService {
 
@@ -22,5 +24,9 @@ public class ClientService {
 
         clientRepository.save(newClient);
 
+    }
+
+    public List<Client> findAll(){
+        return clientRepository.findAll();
     }
 }
